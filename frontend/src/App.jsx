@@ -36,10 +36,8 @@ export default function App() {
   return (
     <div className="flex min-h-screen bg-slate-100 text-slate-900 font-sans antialiased">
 
-      {/* 1. FIXED ENTERPRISE SIDEBAR */}
       <aside className="w-64 bg-slate-950 text-white flex flex-col border-r border-slate-800 shadow-xl z-10">
 
-        {/* Platform Branding Header */}
         <div className="p-6 border-b border-slate-800 flex items-center space-x-3">
           <div className="bg-emerald-500 p-2 rounded-xl text-slate-950 shadow-md shadow-emerald-500/20">
             <Leaf className="w-6 h-6 fill-slate-950" />
@@ -50,7 +48,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Sidebar Links Navigation */}
         <nav className="flex-1 p-4 space-y-1.5 mt-4">
           <Link
             to="/dashboard"
@@ -86,13 +83,11 @@ export default function App() {
           </Link>
         </nav>
 
-        {/* Footer Tenant Info Tag */}
         <div className="p-4 border-t border-slate-800 text-xs text-slate-500 font-medium">
           Logged in as: <span className="text-slate-300 block font-mono">esg_analyst_01</span>
         </div>
       </aside>
 
-      {/* 2. MAIN PREMIUM BLUE-GREEN WORKSPACE WINDOW */}
       <main className="flex-1 overflow-y-auto px-8 py-10 bg-gradient-to-tr from-slate-200 via-cyan-100/50 to-emerald-100/60">
         <div className="max-w-6xl mx-auto backdrop-blur-sm rounded-3xl p-2">
           <Routes>

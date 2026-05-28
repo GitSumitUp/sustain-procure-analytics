@@ -16,7 +16,7 @@ const Dashboard = () => {
   const fetchMetrics = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/emissions/summary');
+      const response = await axios.get('sustain-procure-analytics-production.up.railway.app/api/emissions/summary');
       setMetrics(response.data);
       setError(null);
     } catch (err) {

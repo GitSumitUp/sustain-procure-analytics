@@ -40,7 +40,7 @@ export default function UploadPage() {
     }));
 
     try {
-      const response = await axios.post(`http://127.0.0.1:8000/api/upload/${endpoint}`, formData, {
+      const response = await axios.post(`sustain-procure-analytics-production.up.railway.app/api/upload/${endpoint}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
