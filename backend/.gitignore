@@ -1,0 +1,16 @@
+# Python environment
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Database and secrets (Crucial!)
+db.sqlite3
+.env
+.secrets
+
+# Data files (If you do not want to track them publicly)
+*.csv
