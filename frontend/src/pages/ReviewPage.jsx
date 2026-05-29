@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config/api.js';
 import { CheckCircle, XCircle, AlertCircle, Lock, RefreshCw } from 'lucide-react';
 
 const ReviewPage = () => {
@@ -10,7 +11,7 @@ const ReviewPage = () => {
   const fetchRecords = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/emissions/records');
+      const response = await axios.get(`${API_URL}/api/emissions/records`);
       setRecords(response.data);
     } catch (err) {
       console.error("Error downloading data ledger rows", err);
@@ -22,8 +23,8 @@ const ReviewPage = () => {
   const handleAction = async (id, action) => {
     setProcessingId(id);
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/emissions/records/${id}/review`, { action });
-      // Optimized state adjustment - modifies local array list instead of making another full GET call
+      await axios.patch(`${API_URL}/api/emissions/records/${id}/review`, { action });
+
       setRecords(prev => prev.map(rec => {
         if (rec.id === id) {
           return {

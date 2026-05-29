@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config/api.js';
 import { Database, AlertTriangle, CheckCircle, RefreshCw } from 'lucide-react';
 
 const Dashboard = () => {
@@ -16,7 +17,7 @@ const Dashboard = () => {
   const fetchMetrics = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('sustain-procure-analytics-production.up.railway.app/api/emissions/summary');
+      const response = await axios.get(`${API_URL}/api/emissions/summary`);
       setMetrics(response.data);
       setError(null);
     } catch (err) {

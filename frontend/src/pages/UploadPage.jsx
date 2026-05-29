@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config/api.js';
 import { UploadCloud, CheckCircle, AlertTriangle, FileText, Loader2 } from 'lucide-react';
 
 export default function UploadPage() {
@@ -40,7 +41,7 @@ export default function UploadPage() {
     }));
 
     try {
-      const response = await axios.post(`sustain-procure-analytics-production.up.railway.app/api/upload/${endpoint}`, formData, {
+      const response = await axios.post(`${API_URL}/api/upload/${endpoint}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
