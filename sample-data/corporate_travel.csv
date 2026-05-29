@@ -1,0 +1,5 @@
+Trip_ID,Employee_Email,Expense_Type,Origin_IATA,Destination_IATA,Cabin_Class,Quantity_Days,Total_Spend_USD
+TRIP-9921,j.doe@company.com,Air_Travel,BOM,DXB,Business,1,1250.00
+TRIP-9921,j.doe@company.com,Hotel_Stay,NaN,NaN,Standard,4,600.00
+TRIP-9954,a.smith@company.com,Air_Travel,LHR,JFK,Economy,1,850.00
+TRIP-9980,m.muller@company.com,Ground_Rail,FRA,AMS,Standard,1,120.00
